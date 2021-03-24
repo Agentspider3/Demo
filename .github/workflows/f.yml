@@ -18,4 +18,4 @@ jobs:
       - name: one
         uses: actions/checkout@v2
       - name: two
-        run: "Get-ChildItem Env: | Sort-Object Name"                                                                                                                                                21,52 All
+        run: echo Hello                                                                                                                                              21,52 All
