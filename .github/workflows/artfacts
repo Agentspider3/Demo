@@ -1,0 +1,19 @@
+name: artifact
+
+on: push
+
+env:
+ var_name: myartifact
+
+jobs:
+  mainjob:
+    name: First job
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code one
+        uses: actions/checkout@v2
+      - name: upload artifact two
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ env.var_name }} 
+          path: .                            //.for entire repo to zip file
