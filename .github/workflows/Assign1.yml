@@ -21,13 +21,14 @@ jobs:
         run: echo Hello        
   job3:
      name: third job
-     runs-on: ubuntu-latest
+     runs-on: macos-latest
      steps:
        - name: one
          uses: actions/checkout@v2
        - name: two
          run: env | sort
   job4:
+    needs: [job1,job2,job3]
     name: forth job
     runs-on: ubuntu-latest
     steps:
